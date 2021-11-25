@@ -6,12 +6,13 @@
 /*   By: bguyot <bguyot@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:08:27 by bguyot            #+#    #+#             */
-/*   Updated: 2021/11/24 08:29:24 by bguyot           ###   ########.fr       */
+/*   Updated: 2021/11/24 15:54:46 by bguyot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
 #include <stdlib.h>
+#include "unistd.h"
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
 char				*ft_strdup(char *src);
@@ -46,7 +47,7 @@ char	*ft_strdup(char *src)
 	int		i;
 	char	*dst;
 
-	dst = (char *) malloc(ft_strlen(src));
+	dst = (char *) malloc(ft_strlen(src) + 1);
 	if (!dst)
 		return (NULL);
 	i = 0;
