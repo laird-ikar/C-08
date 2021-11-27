@@ -6,7 +6,7 @@
 /*   By: bguyot <bguyot@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:08:27 by bguyot            #+#    #+#             */
-/*   Updated: 2021/11/25 10:15:40 by bguyot           ###   ########.fr       */
+/*   Updated: 2021/11/27 16:09:27 by bguyot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,21 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	struct s_stock_str	*res;
 	int					i;
 
-	res = malloc(sizeof(t_stock_str[ac]) + 1);
+	res = malloc(sizeof(*res) * (ac + 1));
 	if (!res)
 		return (NULL);
 	i = 0;
 	while (i < ac)
 	{
-		res[i].str = ft_strdup(av[i]);
-		if (!res[i].str)
-			return (NULL);
+		res[i].str = av[i];
 		res[i].copy = ft_strdup(av[i]);
 		if (!res[i].copy)
 			return (NULL);
 		res[i].size = ft_strlen(av[i]);
 		i++;
 	}
+	res[i].str = 0;
+	res[i].copy = 0;
 	res[i].str = 0;
 	return (res);
 }

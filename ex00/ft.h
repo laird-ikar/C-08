@@ -6,7 +6,7 @@
 /*   By: bguyot <bguyot@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:27:26 by bguyot            #+#    #+#             */
-/*   Updated: 2021/11/23 12:57:49 by bguyot           ###   ########.fr       */
+/*   Updated: 2021/11/25 14:16:04 by bguyot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void	ft_putstr(char *str);
 
 int		ft_strlen(char *str);
 int		ft_strcmp(char *s1, char *s2);
+
 #endif
